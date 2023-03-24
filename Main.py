@@ -7,6 +7,7 @@ import os
 import smtplib
 import random
 import cv2
+import time
 
 engine=pyttsx3.init('sapi5')
 voices=engine.getProperty('voices')
@@ -44,6 +45,7 @@ def microinput():
 
     except Exception as e:
         # print(e)
+        time.sleep(5)
         speak('can you please speak up....')
         print('can you please speak up....')
         return "None"
